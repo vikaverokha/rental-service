@@ -1,6 +1,6 @@
 const api = "http://localhost:3000/api/auth";
 
-// ------------------- РЕГИСТРАЦИЯ -------------------
+
 document.getElementById("registerForm")?.addEventListener("submit", async (e) => {
   e.preventDefault();
 
@@ -33,7 +33,7 @@ document.getElementById("registerForm")?.addEventListener("submit", async (e) =>
   }
 });
 
-// ------------------- ВХОД -------------------
+
 document.getElementById("loginForm")?.addEventListener("submit", async (e) => {
   e.preventDefault();
 
