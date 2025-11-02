@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Rental Service Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Хедер -->
+  <header class="header">
+    <h1>Roomly</h1>
+    <button id="logout" class="btn logout-btn">Выйти</button>
+  </header>
+
+  <!-- Основной контейнер -->
+  <div class="container">
+
+    <!-- Дашборд заголовок -->
+    <div class="dashboard-header">
+      <h2 id="dashboard-title">Мои объявления</h2>
+      <button id="showAddForm" class="btn">Добавить объявление</button>
+    </div>
+
+    <!-- Форма добавления объекта -->
+    <div id="addFormContainer" class="card add-form" style="display:none;">
+      <form id="addForm">
+        <input type="text" id="title" placeholder="Заголовок" required>
+        <textarea id="description" placeholder="Описание"></textarea>
+        <input type="text" id="address" placeholder="Адрес">
+        <input type="text" id="city" placeholder="Город">
+        <input type="text" id="country" placeholder="Страна">
+        <input type="number" id="price_per_night" placeholder="Цена за ночь (BYN)" required>
+        <input type="number" id="max_guests" placeholder="Макс. гостей" required>
+        <select id="status">
+          <option value="active">Активно</option>
+          <option value="inactive">Неактивно</option>
+        </select>
+        <div class="form-buttons">
+          <button type="submit" class="btn">Сохранить</button>
+          <button type="button" id="cancelAdd" class="btn secondary">Отмена</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Список объектов -->
+    <div id="list" class="cards-container"></div>
+
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

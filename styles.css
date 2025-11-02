@@ -1,0 +1,306 @@
+/* ================== ОБЩИЕ СТИЛИ ================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background: #f2f1ed;
+  color: #09092d;
+  min-height: 100vh;
+}
+
+/* ================== ХЕДЕР ================== */
+header.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: #393781;
+  color: #f2f1ed;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+header.header h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logout-btn {
+  padding: 6px 14px;
+  border-radius: 6px;
+  background: #f4bba4;
+  border: none;
+  color: #09092d;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.logout-btn:hover {
+  background: #e8a88f;
+}
+
+/* ================== ГЛАВНАЯ СТРАНИЦА ================== */
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  text-align: center;
+}
+
+.home-card {
+  background: #393781;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  max-width: 500px;
+  color: #f2f1ed;
+}
+
+.home-card h1 {
+  font-size: 36px;
+  margin-bottom: 15px;
+  color: #f4bba4;
+}
+
+.home-card p {
+  font-size: 16px;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+.home-buttons .btn {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background: #f4bba4;
+  color: #09092d;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.home-buttons .btn:hover {
+  background: #e8a88f;
+}
+
+/* ================== ФОРМЫ АВТОРИЗАЦИИ ================== */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.auth-container .card {
+  background: #f2f1ed;
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.auth-container h2 {
+  font-size: 24px;
+  color: #393781;
+  margin-bottom: 20px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border: 1px solid #09092d;
+  font-size: 15px;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #393781;
+  box-shadow: 0 0 5px rgba(57,55,129,0.5);
+}
+
+.btn {
+  padding: 10px 18px;
+  margin: 15px 0 10px 0;
+  border-radius: 6px;
+  border: none;
+  background: #393781;
+  color: #f2f1ed;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #5b5acd;
+}
+
+.link {
+  font-size: 13px;
+  color: #393781;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* ================== DASHBOARD ================== */
+.container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.dashboard-header h2 {
+  color: #09092d;
+  font-size: 20px;
+}
+
+#showAddForm {
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background: #393781;
+  color: #f2f1ed;
+  font-weight: bold;
+}
+
+#showAddForm:hover {
+  background: #5b5acd;
+}
+
+/* ================== Карточки объектов ================== */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.property-card {
+  background: #f2f1ed;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.property-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.property-card .card-content {
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.property-card h3.property-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #393781;
+  margin-bottom: 8px;
+}
+
+.property-card .property-address {
+  font-size: 14px;
+  color: #09092d;
+  margin-bottom: 6px;
+}
+
+.property-card .property-description {
+  font-size: 13px;
+  color: #09092d;
+  margin-bottom: 10px;
+  line-height: 1.4;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+.property-card .property-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: #09092d;
+  margin-top: auto;
+}
+
+.card-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.property-card .btn.secondary {
+  padding: 6px 12px;
+  font-size: 13px;
+  border-radius: 6px;
+  background: #f4bba4;
+  color: #09092d;
+}
+
+.property-card .btn.secondary:hover {
+  background: #e8a88f;
+}
+
+/* Форма добавления */
+.add-form input, .add-form textarea, .add-form select {
+  margin-bottom: 10px;
+}
+
+.add-form .form-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* Адаптивность */
+@media (max-width: 900px) {
+  .cards-container {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

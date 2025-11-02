@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Регистрация — Roomly</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="auth-container">
+    <div class="card">
+      <h2>Регистрация</h2>
+      <form id="registerForm">
+        <input type="text" placeholder="Имя" id="first_name" required>
+        <input type="text" placeholder="Фамилия" id="last_name">
+        <input type="email" placeholder="Email" id="email" required>
+        <input type="text" placeholder="Телефон" id="phone_number">
+        <input type="password" placeholder="Пароль" id="password" required>
+        <select id="role" required>
+          <option value="">Выберите роль</option>
+          <option value="tenant">Арендатор</option>
+          <option value="landlord">Арендодатель</option>
+        </select>
+        <button type="submit" class="btn">Зарегистрироваться</button>
+      </form>
+      <a href="login.html" class="link">Уже есть аккаунт? Войти</a>
+    </div>
+  </div>
+  <script src="auth.js"></script>
+</body>
+</html>
