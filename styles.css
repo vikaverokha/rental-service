@@ -1,4 +1,4 @@
-/* ================== ОБЩИЕ СТИЛИ ================== */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,7 +12,6 @@ body {
   min-height: 100vh;
 }
 
-/* ================== ХЕДЕР ================== */
 header.header {
   display: flex;
   justify-content: space-between;
@@ -46,7 +45,6 @@ header.header h1 {
   background: #e8a88f;
 }
 
-/* ================== ГЛАВНАЯ СТРАНИЦА ================== */
 .home-container {
   display: flex;
   justify-content: center;
@@ -93,7 +91,6 @@ header.header h1 {
   background: #e8a88f;
 }
 
-/* ================== ФОРМЫ АВТОРИЗАЦИИ ================== */
 .auth-container {
   display: flex;
   justify-content: center;
@@ -159,7 +156,6 @@ input:focus, select:focus, textarea:focus {
   text-decoration: underline;
 }
 
-/* ================== DASHBOARD ================== */
 .container {
   max-width: 1200px;
   margin: 20px auto;
@@ -195,7 +191,6 @@ input:focus, select:focus, textarea:focus {
   background: #5b5acd;
 }
 
-/* ================== Карточки объектов ================== */
 .cards-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -277,7 +272,6 @@ input:focus, select:focus, textarea:focus {
   background: #e8a88f;
 }
 
-/* Форма добавления */
 .add-form input, .add-form textarea, .add-form select {
   margin-bottom: 10px;
 }
@@ -288,7 +282,6 @@ input:focus, select:focus, textarea:focus {
   gap: 10px;
 }
 
-/* Адаптивность */
 @media (max-width: 900px) {
   .cards-container {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
