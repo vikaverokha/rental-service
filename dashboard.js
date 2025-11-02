@@ -11,7 +11,7 @@ const list = document.getElementById("list");
 const dashboardTitle = document.getElementById("dashboard-title");
 const cancelAddBtn = document.getElementById("cancelAdd");
 
-// Только для хоста показываем кнопку добавления и форму
+
 if (role !== "host") {
   showAddFormBtn.style.display = "none";
   addFormContainer.style.display = "none";
@@ -41,7 +41,7 @@ async function loadProperties() {
     const res = await fetch(api, { headers: { "Authorization": "Bearer " + token } });
     const data = await res.json();
 
-    // Для хоста — только свои объявления, для арендатора — все активные
+    
     const displayProps = role === "host" 
       ? data.filter(p => p.owner_id == user_id)
       : data.filter(p => p.status === "active");
@@ -162,5 +162,5 @@ async function edit(id) {
   }
 }
 
-// Загрузка при старте
+
 loadProperties();
